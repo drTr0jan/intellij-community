@@ -94,7 +94,7 @@ public final class Restarter {
         problem = checkRestarter("restarter");
       }
     }
-    else if (SystemInfo.isLinux) {
+    else if (SystemInfo.isLinux || SystemInfo.isFreeBSD) {
       if (ourStarter.getValue() == null) {
         problem = "cannot find launcher script in " + PathManager.getBinPath();
       }
